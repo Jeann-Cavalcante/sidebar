@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --dark: #0f1012;
+  --dark-ligth: #1d1f2a;
+  --orange: #fb6b46;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--dark);
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.navigation {
+  position: relative;
+  height: 100vh;
+  background: var(--dark-ligth);
+  width: 300px;
+  box-shadow: 10px 0 0 var(--orange);
+  border-left: 10px solid var(--dark-ligth);
+  overflow-x: hidden;
+  transition: 0.5s;
+  gap: 80px;
+}
+
+.navigation ul {
+  position: absolute;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.navigation ul li a .icon ion-icon {
+  position: relative;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.menu-abre-fecha {
+  display: flex;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  padding-left: 10px;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.navigation ul li.active {
+  background: var(--orange);
+}
+
+.navigation ul li.active a::before {
+  content: " ";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--dark-ligth);
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 var(--orange);
+}
+
+.navigation ul li.active a::after {
+  content: " ";
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--dark-ligth);
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 var(--orange);
+}
